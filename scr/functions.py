@@ -49,6 +49,7 @@ def jsonxport(name, l):
 
 def jsongenerator(data, name):
     """
+
     """
     d = data
     map_name = ['name']
@@ -62,11 +63,18 @@ def jsongenerator(data, name):
         ndic['categories']= getFromDict(dic,map_categories)
         ndic['latitude']= getFromDict(dic,map_lat)
         ndic['longitude']= getFromDict(dic,map_long)
-        ndic['location']= type_point([ndic["latitude"],ndic["longitude"]])
+        if ndic['latitude'] < 0:
+            ndic['location']= type_point([ndic["longitude"],ndic["latitude"]])
+        else:
+            ndic['location']= type_point([ndic["latitude"],ndic["longitude"]])
         l.append(ndic)
     return jsonxport(name, l)
 
+
 def geoquering(cathegory, distance):
+    """
+    
+    """
     c = f'{cathegory}'
     cond1 = {'categories.name': c}
     cond2 = {"location": {"$near": {"$geometry": paris_, "$minDistance": 0 ,"$maxDistance": int(distance)}}}
