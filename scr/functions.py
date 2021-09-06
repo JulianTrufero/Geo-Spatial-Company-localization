@@ -65,3 +65,11 @@ def jsongenerator(data, name):
         ndic['location']= type_point([ndic["latitude"],ndic["longitude"]])
         l.append(ndic)
     return jsonxport(name, l)
+
+def geoquering(cathegory, distance):
+    c = f'{cathegory}'
+    cond1 = {'categories.name': c}
+    cond2 = {"location": {"$near": {"$geometry": paris_, "$minDistance": 0 ,"$maxDistance": int(distance)}}}
+    gquery = {'$and': [cond1, cond2]}
+    l = list(transport.find(gquery))
+    return l
