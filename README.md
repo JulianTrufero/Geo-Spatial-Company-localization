@@ -1,3 +1,5 @@
+![Image](https://github.com/JulianTrufero/Geo-Spatial-Company-localization/blob/main/Images/google-maps-trucos.jpg)
+
 ## GEO-SPATIAL LOCALIZATION PROYECT
 - In this proyect, we will decide where to place the offices of a new company in the gaming industry. The company will have: 20 Designers, 5 UI/UX Engineers, 10 Frontend Developers, 15 Data Engineers, 5 Backend Developers, 20 Account Managers, 1 Maintenance guy that loves basketball, 10 Executives and 1 CEO/President.
 - To define the best place for the company to grow, we focused on 6 different criteria out of all the company's employee preferences: account managers need to travel a lot, 30% of the company staff have at least 1 child, the CEO is vegan, executives like Starbucks A LOT, to make the maintenance guy happy, a basketball stadium must be around 10 Km and the office dog—"Dobby" needs a hairdresser every month. 
